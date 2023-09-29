@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos.css" />
     <title>Gonzalo Pasos</title>
-    <link rel="stylesheet" href="estilos.css">
-    <script src="codigo.js"></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">GP</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">CV</a></li>
+          <li><a href="#">Porfolio</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">HOLA</p>
+          <h1 class="title">
+            Soy <span>Gonzalo</span><br> Developer Back-end
+          </h1>
+          <p class="description">
+            "Bienvenidos a mi portafolio. Soy Gonzalo, estudiante de programación en la Universidad 
+            Tecnológica Nacional y autodidacta. Trabajé en una variedad de proyectos, incluyendo 
+            proyectos de consola en lenguajes como C y C++, proyectos de escritorio con C# .NET y SQL, 
+            así como proyectos web en Python con Django, HTML y CSS."
+          </p>
+          <div class="action__btns">
+            <button class="hire__me">Contratame</button>
+            <button class="portfolio">Porfolio</button>
+          </div>
+        </div>
+        <div class="image">
+          <img src="imagen/DSC01080_.jpg" alt="DSC01080_" />
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
