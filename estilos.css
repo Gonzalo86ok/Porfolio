@@ -134,12 +134,7 @@ ul li a:hover {
   margin-bottom: 2rem;
 }
 
-.action__btns {
-  display: flex;
-  gap: 1rem;
-}
-
-.action__btns button {
+.button-link {
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 2px;
@@ -149,22 +144,25 @@ ul li a:hover {
   border-radius: 10px;
   transition: 0.3s;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  color: rgb(0, 145, 255);
 }
 
-.hire__me {
+.button-link.contratarme {
   background-color: rgb(0, 145, 255);
   color: #ffffff;
 }
 
-.hire__me:hover {
+.button-link.contratarme:hover {
   background-color: blue;
 }
 
-.portfolio {
+.button-link.porfolio {
   color: rgb(0, 145, 255);
 }
 
-.portfolio:hover {
+.button-link.porfolio:hover {
   background-color: blue;
   color: #ffffff;
 }
@@ -177,4 +175,33 @@ ul li a:hover {
 .image img {
   width: min(25rem, 90%);
   border-radius: 100%;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer__content a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.footer__content a:hover {
+  color: blue;
+}
+
+.footer__content img {
+  width: 40px; 
+  height: auto;
+  border-radius: 10px;
 }
