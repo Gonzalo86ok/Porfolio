@@ -7,7 +7,7 @@ body, ul, li {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: white;
 }
 
 nav {
@@ -28,7 +28,7 @@ nav {
   z-index: 99;
 }
 
-.nav__content {
+.nav_content {
   max-width: 1200px;
   margin: auto;
   padding: 1.5rem 1rem;
@@ -45,6 +45,7 @@ nav .logo a {
   font-size: 1.5rem;
   font-weight: 600;
   color: white;
+  text-decoration: none;
   transition: 0.3s;
 }
 
@@ -93,7 +94,7 @@ ul li a:hover {
   background-color: white;
 }
 
-.section__container {
+.section_container {
   min-height: 100vh;
   max-width: 1200px;
   margin: auto;
@@ -128,10 +129,19 @@ ul li a:hover {
   font-weight: 600;
 }
 
-.description {
+.descripcion {
   line-height: 1.5rem;
   color: grey;
   margin-bottom: 2rem;
+}
+
+.aptitudes{
+  text-align: center;
+}
+
+.apt_descripcion{
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .button-link {
@@ -176,6 +186,10 @@ ul li a:hover {
   width: min(25rem, 90%);
   border-radius: 100%;
 }
+table {
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
 
 footer {
   background-color: black;
@@ -184,24 +198,24 @@ footer {
   text-align: center;
 }
 
-.footer__content {
+.footer_content {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 
-.footer__content a {
+.footer_content a {
   text-decoration: none;
   color: white;
   transition: color 0.3s;
 }
 
-.footer__content a:hover {
+.footer_content a:hover {
   color: blue;
 }
 
-.footer__content img {
-  width: 40px; 
+.footer_content img {
+  width:40px;
   height: auto;
   border-radius: 10px;
 }
