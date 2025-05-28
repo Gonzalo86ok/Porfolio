@@ -35,11 +35,16 @@
 
         nav a {
             color: white;
-            margin-left: 1rem;
             text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
+            padding: 0.5rem;
+            transition: background-color 0.3s ease;
         }
+
+        nav a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
 
         .logo {
             font-size: 2rem;
@@ -139,12 +144,6 @@
             text-align: center;
         }
 
-        .aptitud:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-
-
         /* --- FOOTER --- */
         footer {
             background-color: #333;
@@ -182,7 +181,7 @@
     <section class="presentacion">
         <div class="contenido">
             <div class="texto">
-                <h1><strong>Gonzalo Pasos</strong></h1>
+                <h1><strong>Gonzalo Pasos </strong></h1>
                 <h2>Developer</h2>
 
                 <p>
@@ -214,7 +213,7 @@
     </section>
 
     <section>
-        <h2 style="text-align: center;">Aptitudes</h2>
+        <h1 style="text-align: center;">Aptitudes</h1>
         <div class="categorias">
 
             <div class="categoria">
