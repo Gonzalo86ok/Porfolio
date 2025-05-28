@@ -1,13 +1,256 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gonzalo Pasos</title>
-    <link rel="stylesheet" href="estilos.css">
-    <script src="codigo.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Gonzalo Pasos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 1rem;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+
+        /* --- PRESENTACIÓN --- */
+        .presentacion {
+            padding: 4rem 2rem;
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+        }
+
+        .contenido {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .texto {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .texto h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .texto h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .texto p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #444;
+            max-width: 600px;
+        }
+
+        .foto img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #ddd;
+        }
+
+        /* --- APTITUDES --- */
+        .categorias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .categoria {
+            text-align: center;
+        }
+
+        .categoria h3 {
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #333;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .aptitud {
+            width: 100px;
+            height: auto;
+            margin: 1rem auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .aptitud img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .aptitud span {
+            font-size: 0.9rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .aptitud:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto;
+        }
+
+        /* --- RESPONSIVO BÁSICO --- */
+        @media (max-width: 768px) {
+            .contenido {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .botones a {
+                display: inline-block;
+                margin: 0.5rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    
+    <header>
+        <div class="logo"><strong>GP</strong></div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="presentacion">
+        <div class="contenido">
+            <div class="texto">
+                <h1><strong>Gonzalo Pasos</strong></h1>
+                <h2>Developer</h2>
+
+                <p>
+                    Hola, soy Gonzalo. Trabajé durante 13 años en el área de iluminación de Telefe, hasta que decidí dar
+                    un giro profesional y me formé como Técnico Universitario en Programación en la UTN.
+                </p>
+
+                <p>
+                    Durante mi formación adquirí una sólida base en lógica de programación con C, desarrollé
+                    aplicaciones de escritorio en C++, y trabajé en proyectos web utilizando tecnologías como C# .NET
+                    con SQL Server, Java con MySQL, y diseño web con HTML y CSS.
+                </p>
+
+                <p>
+                    Actualmente, continúo formándome de manera autodidacta y estoy desarrollando aplicaciones web con
+                    Python y Django, enfocado especialmente en el back-end.
+                </p>
+
+                <p>
+                    Busco seguir creciendo como desarrollador, aplicando mis conocimientos y experiencia para aportar
+                    valor en nuevos desafíos tecnológicos.
+                </p>
+            </div>
+
+            <div class="foto">
+                <img src="img/foto.jpg" alt="Gonzalo Pasos">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 style="text-align: center;">Aptitudes</h2>
+        <div class="categorias">
+
+            <div class="categoria">
+                <h3>Lenguajes</h3>
+                <div class="aptitud"><img src="img/cpp.svg" alt="C++"><span>C++</span></div>
+                <div class="aptitud"><img src="img/csharp.png" alt="C#"><span>C#</span></div>
+                <div class="aptitud"><img src="img/java.webp" alt="Java"><span>Java</span></div>
+                <div class="aptitud"><img src="img/python.png" alt="Python"><span>Python</span></div>
+                <div class="aptitud"><img src="img/html5.webp" alt="HTML"><span>HTML</span></div>
+            </div>
+
+            <div class="categoria">
+                <h3>Frameworks</h3>
+                <div class="aptitud"><img src="img/dotnet.svg" alt=".NET"><span>.NET</span></div>
+                <div class="aptitud"><img src="img/django.png" alt="Django"><span>Django</span></div>
+            </div>
+
+            <div class="categoria">
+                <h3>Base de datos</h3>
+                <div class="aptitud"><img src="img/mysql.jpg" alt="MySQL"><span>MySQL</span></div>
+                <div class="aptitud"><img src="img/sqlserver.png" alt="SQL Server"><span>SQL Server</span></div>
+            </div>
+
+            <div class="categoria">
+                <h3>Herramientas</h3>
+                <div class="aptitud"><img src="img/git.png" alt="Git"><span>Git</span></div>
+                <div class="aptitud"><img src="img/github.jpg" alt="GitHub"><span>GitHub</span></div>
+                <div class="aptitud"><img src="img/vscode.jpg" alt="VS Code"><span>VS Code</span></div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Gonzalo Pasos
+    </footer>
 </body>
+
 </html>
