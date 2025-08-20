@@ -1,0 +1,192 @@
+/* CSS Compartido - Header y Footer */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #333;
+    color: white;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    position: relative;
+}
+
+nav a:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav a.active {
+    background-color: #007BFF;
+}
+
+/* --- MENÚ HAMBURGUESA --- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    color: white;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    font-size: 1.1rem;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 2rem;
+        position: relative;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    /* Mostrar menú hamburguesa */
+    .hamburger {
+        display: flex;
+        z-index: 1000;
+    }
+
+    /* Ocultar navegación normal */
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #333;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 5rem;
+        transition: right 0.3s ease;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav a {
+        width: 80%;
+        text-align: center;
+        padding: 1.5rem;
+        margin: 0.5rem 0;
+        font-size: 1.3rem;
+        border-radius: 10px;
+    }
+
+    /* Animación del hamburguesa */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* Overlay para cerrar menú */
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+    }
+
+    .nav-overlay.active {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    nav {
+        width: 100%;
+        max-width: none;
+    }
+
+    nav a {
+        width: 90%;
+        font-size: 1.4rem;
+        padding: 2rem;
+    }
+}
+

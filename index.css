@@ -1,0 +1,133 @@
+/* CSS Específico - Página de Inicio */
+
+body {
+    background: #fff;
+}
+
+/* --- PRESENTACIÓN --- */
+.presentacion {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.contenido {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.texto h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.texto h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.texto p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    max-width: 600px;
+    margin-bottom: 1rem;
+}
+
+.foto img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ddd;
+}
+
+/* --- APTITUDES --- */
+section h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 2.5rem;
+}
+
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.categoria {
+    text-align: center;
+}
+
+.categoria h3 {
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.aptitud {
+    width: 100px;
+    height: auto;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aptitud:hover {
+    transform: scale(1.05);
+}
+
+.aptitud img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.aptitud span {
+    font-size: 0.9rem;
+    color: #333;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+    .contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texto h1 {
+        font-size: 2rem;
+    }
+
+    .texto h2 {
+        font-size: 1.5rem;
+    }
+
+    .categorias {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}

@@ -5,117 +5,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto | Gonzalo Pasos</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            background-color: #f9f9f9;
-            min-height: 100vh;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem;
-            transition: background-color 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: #555;
-            border-radius: 5px;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        main {
-            flex-grow: 1;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        h1 {
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        p {
-            margin-bottom: 2rem;
-            color: #555;
-            font-size: 1rem;
-        }
-
-        .redes {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .red {
-            text-align: center;
-            text-decoration: none;
-            color: #333;
-            font-size: 0.95rem;
-        }
-
-        .red svg {
-            width: 48px;
-            height: 48px;
-            margin-bottom: 0.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .red:hover svg {
-            transform: scale(1.1);
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            nav {
-                margin-top: 1rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contacto.css">
 </head>
 
 <body>
     <header>
         <div class="logo"><strong>GP</strong></div>
+        <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav>
             <a href="index.html">Inicio</a>
             <a href="portfolio.html">Portfolio</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="contacto.html" class="active">Contacto</a>
         </nav>
+        <div class="nav-overlay"></div>
     </header>
 
     <main>
@@ -123,12 +30,12 @@
         <p>Podés encontrarme en estas redes profesionales:</p>
         <div class="redes">
             <a class="red" href="https://www.linkedin.com/in/gonzalo-pasos-376a5318b/" target="_blank">
-                <img src="img/linkedin.png" alt="LinkedIn" width="48" height="48">
+                <img src="img/linkedin.png" alt="LinkedIn">
                 <div>LinkedIn</div>
             </a>
 
             <a class="red" href="https://github.com/Gonzalo86ok" target="_blank">
-                <img src="img/github.webp" alt="GitHub" width="48" height="48">
+                <img src="img/github.webp" alt="GitHub">
                 <div>GitHub</div>
             </a>
         </div>
@@ -138,6 +45,8 @@
     <footer>
         © 2025 Gonzalo Pasos
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
